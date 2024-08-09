@@ -1,0 +1,48 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 5vh;
+    padding: 10px 20px;
+
+    background-color: #292827;
+
+    color: white;
+    font-family: Arial, serif;
+    font-weight: bold;
+
+    display: flex;
+    font-size: 3em;
+    align-items: center; /* Vertically centers the content */
+}
+
+.header-nav {
+    display: none;
+    max-block-size: 4vh;
+    width: auto ;
+}
+
+.header-name {
+    position: relative;
+    font-size: 5vh;
+    text-align: center;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    user-select: none;
+    padding: 10px 20px;
+
+    background-image:linear-gradient(to right, #fff, #fff 33.33333%, #f10000 66.66666%, #0000f1);
+    background-size: 300% 100%;
+    background-position: top left;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition:all 250ms ease-in-out;
+}
+
+.header-name:hover {
+    background-position: top left 100%;
+    cursor: pointer;
+
+}
