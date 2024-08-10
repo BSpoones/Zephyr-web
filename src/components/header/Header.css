@@ -1,19 +1,18 @@
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
     width: 100vw;
-    height: 5vh;
-    padding: 10px 20px;
+    min-height: 20px;
+    max-height: 5vh;
+    height: auto;
+    padding: 1vh 1vw;
 
     background-color: #292827;
 
-    color: white;
     font-family: Arial, serif;
     font-weight: bold;
 
     display: flex;
-    font-size: 3em;
     align-items: center; /* Vertically centers the content */
 }
 
@@ -24,21 +23,24 @@ header {
 }
 
 .header-name {
-    position: relative;
+    position: absolute;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%);
     font-size: 5vh;
     text-align: center;
     color: white;
     margin-left: auto;
     margin-right: auto;
     user-select: none;
-    padding: 10px 20px;
+    padding: 1vh 1vw;
 
     background-image:linear-gradient(to right, #fff, #fff 33.33333%, #f10000 66.66666%, #0000f1);
     background-size: 300% 100%;
     background-position: top left;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition:all 250ms ease-in-out;
+    transition:background-position 250ms ease-in-out;
 }
 
 .header-name:hover {

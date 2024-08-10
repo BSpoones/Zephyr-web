@@ -1,0 +1,46 @@
+nav {
+    position: absolute;
+    top: 100%; /* Position below the header bar */
+    left: 0;
+    background-color: #888;
+    width: 200px;
+    margin: 5px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 90%;
+    transform-origin: top; /* Start scaling from the top-left corner */
+    animation: bubbleOut 150ms forwards ease-in-out;
+
+
+}
+.hamburger-svg rect {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+.gradient-bg {
+    z-index: 1; /* Ensure the gradient is underneath the white cover */
+}
+
+.swipe-in {
+    z-index: 2; /* Place the white cover on top */
+    transform: translateX(0);
+    transition: 150ms ease-in-out;
+}
+
+.swipe-out {
+    z-index: 2;
+    transform: translateX(101%); /* Extra 1% Needed due to browser round issues */
+    transition: 250ms ease-in-out;
+}
+
+@keyframes bubbleOut {
+    from {
+        transform: scale(0); /* Start fully scaled down */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: scale(1); /* Scale up to full size */
+        opacity: 1; /* Fully visible */
+    }
+}
